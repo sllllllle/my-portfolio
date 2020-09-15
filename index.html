@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand rel="stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>My Portfolio</title>
+</head>
+<body>
+  <header>
+    <a href="#top" class="logo">My Portfolio</a>
+    <div class="toggle" onClick="toggleMenu()"></div>
+    <ul class="menu">
+      <li><a href="#top" onClick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onClick="toggleMenu()">About Me</a></li>
+      <li><a href="#work" onClick="toggleMenu()">Work</a></li>
+      <li><a href="#contact" onClick="toggleMenu()">Contact</a></li>
+    </ul>
+  </header>
+  <main>
+    <section id="top">
+      <div class="textBx">
+        <span class="animated">H</span>
+        <span class="animated">i</span>
+        <span class="animated">,</span>
+        <br>
+        <span class="animated">I</span>
+        <span class="animated">'</span>
+        <span class="animated">m</span>
+        <span class="m-left animated name">K</span>
+        <span class="animated name">a</span>
+        <span class="animated name">t</span>
+        <span class="animated name">s</span>
+        <span class="animated name">u</span>
+        <span class="animated name">y</span>
+        <span class="animated name">u</span>
+        <span class="animated name">k</span>
+        <span class="animated name">i</span>
+        <p>Nanzan University.</p>
+        <a href="#about" class="btn">About Me</a>
+      </div>
+      <div class="imgBx">
+        <img src="img/sue.jpg">
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="content">
+        <div class="imgBx">
+          <img src="img/sue.jpg">
+        </div>
+        <div class="textBx">
+          <h3>末永克幸</h3>
+          <p>南山大学（名古屋）の経営学部生。ゲームとサッカーを愛する22歳。<br>
+            夢も目標もなく、周りに流されるまま就職活動を始める。そんな中エンジニアという職業を知り、おしゃれなホームページづくりにハマる。<br>現在、webフロントエンドエンジニアになることを夢見て日々修行中。 
+          </p>
+          <p>資格：英検2級、TOEIC780、運転免許</p>
+        </div>
+      </div>
+    </section>
+    <section id="work">
+      <h2>Work</h2>
+      <div class="content">
+        <div class="card"><a href="https://www.home-study.gq/">
+          <div class="imgBx">
+            <img src="img/homsta.png">
+          </div>
+          <div class="textBx">
+            <p class="name">Home Study (2020.8)</p>
+            <p>■FrontEnd</p>
+            <p>HTML CSS Javascript Bootstrap</p>
+            <p>■BackEnd</p>
+            <p>Ruby Rails</p>
+            <p>■Other</p>
+            <p>MySQL Nginx Puma VPC RDS EC2 ALB ACM Route53 Docker RSpec</p>
+          </div>
+        </div></a>
+        <div class="card">
+          <div class="imgBx">
+            <img src="img/portfolio.png">
+          </div>
+          <div class="textBx">
+            <div>
+              <p class="name">My Portfolio Website (2020.9)</p>
+              <p>■FrontEnd</p>
+              <p>HTML CSS Javascript</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="heading">
+        <h2>Contact</h2>
+        <p>24時間以内にご返信いたします。</p>
+      </div>
+      <div class="content">
+        <div class="contactInfo">
+          <h3>連絡情報</h3>
+          <div class="contactInfoBx">
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <div class="text">
+                <h3>住所</h3>
+                <p>三重県四日市市富田浜町28-17</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="text">
+                <h3>携帯電話</h3>
+                <p>070-4457-0874</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="text">
+                <h3>メールアドレス</h3>
+                <p>lac85md@icloud.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formBx">
+          <form action="https://api.staticforms.xyz/submit" method="post">
+            <input type="text" name="name" placeholder="氏名">
+            <input type="email" name="email" placeholder="メールアドレス">
+            <textarea placeholder="ご用件" name="message"></textarea>
+            <input type="hidden" name="accessKey" value="e6ffcc59-cdc9-4178-9b37-8a50382237c2">
+            <input type="hidden" name="subject" value="Contact from My Portfolio">
+            <input type="submit" value="Send">
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="copyright">
+      <p>Copyright 🄫 2020 Katsuyuki Suenaga. ALL Right Reserved.</p>
+    </div>
+  </main>
+  <script type="text/javascript">
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+    function toggleMenu() {
+      var menuToggle = document.querySelector('.toggle');
+      var menu = document.querySelector('.menu');
+      menuToggle.classList.toggle('active');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
