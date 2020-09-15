@@ -23,7 +23,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 100px;
+  padding: 40px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,7 +197,7 @@ header.sticky ul li a {
   border-radius: 50px;
   background: #252627;
   box-shadow:  20px 20px 40px #18191a, 
-             -20px -20px 40px #323334;
+              -20px -20px 40px #323334;
   padding: 30px;
   z-index: 2;
   max-width: 1000px;
@@ -227,6 +227,7 @@ header.sticky ul li a {
   max-width: 100%;
   height: 390px;
   object-fit: cover;
+  border-radius: 20px;
 }
 #work {
   min-height: 80vh;
@@ -450,5 +451,90 @@ header.sticky ul li a {
   #about h2,
   #work h2 {
     font-size: 8em;
+  }
+}
+@media (max-width: 480px) {
+  header,
+  header.sticky {
+    padding: 20px 30px;
+  }
+  header .logo {
+    font-size: 17px;
+  }
+  section {
+    padding: 30px;
+    padding-bottom: 0;
+  }
+  #top {
+    display: flex;
+    flex-direction: column;
+  }
+  #top .textBx {
+    text-align: center;
+  }
+  #top .imgBx {
+    margin-left: 0;
+    margin-top: 40px;
+    box-shadow: none;
+  }
+  #top .imgBx img {
+    width: 200px;
+    height: 200px;
+  }
+  #top .textBx span {
+    font-size: 1.6em;
+  }
+  #top .btn {
+    display: none;
+  }
+  #about h2,
+  #work h2 {
+    font-size: 4em;
+  }
+  #about .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px
+  }
+  #about .imgBx img {
+    height: 340px;
+  }
+  #about .textBx {
+    padding: 20px 0;
+    max-width: 100%;
+  }
+  #work {
+    min-height: 70vh;
+    align-items: flex-start;
+  }
+  #contact .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact .content .contactInfo {
+    min-width: 100%;
+  }
+  #contact .content .contactInfo > h3 {
+    text-align: center;
+  }
+  #contact .content .contactInfo .contactInfoBx h3 {
+    font-size: 18px;
+  }
+  #contact .content .contactInfo .contactInfoBx .box  {
+    padding: 10px 0;
+  }
+  #contact .content .contactInfo .contactInfoBx .box .text {
+    font-size: 14px;
+  }
+
+  #contact .content .formBx {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+  #contact .content .formBx form input[type="submit"] {
+    margin: 0 auto 10px;
+  }
+  .copyright {
+    font-size: 10px;
   }
 }
