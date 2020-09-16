@@ -88,13 +88,21 @@
             <div>
               <p class="name">My Portfolio Website (2020.9)</p>
               <p>■FrontEnd</p>
-              <p>HTML CSS Javascript</p>
+              <p>HTML CSS Javascript Vue.js</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="feedback">
+      <div class="content">
+        <h2>もしよければ、このWebサイトのご感想をお聞かせください。</h2>
+        <textarea v-model="feedback" maxlength="140" placeholder="ご感想"></textarea>
+        <p v-bind:style="{color: computedColor}">残り {{ remaining }}文字</p>
+        <button type="submit">送る</button>
+      </div>
+    </section>
     <section id="contact">
       <div class="heading">
         <h2>Contact</h2>
@@ -159,6 +167,29 @@
       menuToggle.classList.toggle('active');
       menu.classList.toggle('active');
     }
+  </script>
+  <script>
+    new Vue({
+      el: '#feedback',
+      data: {
+        feedback: ''
+      },
+      computed: {
+        remaining: function() {
+          return 140 - this.feedback.length;
+        },
+        computedColor: function() {
+          color = 'green';
+          if (this.remaining < 20) {
+            color = 'orange';
+          }
+          if (this.remaining < 1) {
+            color = 'red';
+          }
+          return color;
+        }
+      }
+    })
   </script>
 </body>
 </html>
