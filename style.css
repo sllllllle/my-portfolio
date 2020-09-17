@@ -9,9 +9,27 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   user-select: none;
-
 }
 
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+/* 「iOSでのsubmit, buttonのデザインをリセットするCSS」- https://qiita.com/mi_upto/items/b35f405a87a2dc56fd48 */
 
 section {
   padding: 100px;
@@ -307,9 +325,10 @@ header.sticky ul li a {
   align-items: center;
 }
 #feedback .content h2 {
-  margin: 20px 0;
+  margin: 20px;
+  margin-bottom: 0;
   color: #fff;
-  font-size: 1.4em;
+  font-size: 1.2em;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -508,6 +527,12 @@ header.sticky ul li a {
   #work h2 {
     font-size: 8em;
   }
+  #feedback .content {
+    min-width: 100%;
+  }
+  #feedback .content h2 {
+    font-size: 1em;
+  }
 }
 @media (max-width: 480px) {
   header,
@@ -547,21 +572,55 @@ header.sticky ul li a {
   #work h2 {
     font-size: 4em;
   }
+  #about {
+    padding-bottom: 20px;
+  }
   #about .content {
     display: flex;
     flex-direction: column;
-    margin-top: 50px
+    margin-top: 50px;
+    min-width: 100%;
+    
   }
   #about .imgBx img {
-    height: 340px;
+    height: 240px;
   }
   #about .textBx {
     padding: 20px 0;
     max-width: 100%;
   }
+  #about .textBx h3 {
+    font-size: 17px;
+    text-align: center;
+  }
+  #about .textBx p {
+    font-size: 12px;
+  }
   #work {
     min-height: 70vh;
     align-items: flex-start;
+  }
+  #work .content {
+    margin-top: 50px;
+  }
+  #feedback .content {
+    min-width: 100%;
+  }
+  #feedback .content h2 {
+    font-size: 14px;
+  }
+  #feedback .content textarea {
+    width: 80%;
+    font-size: 14px ;
+  }
+  #feedback .content button {
+    font-size: 15px;
+  }
+  #contact .heading h2 {
+    font-size: 20px;
+  }
+  #contact .heading p {
+    font-size: 14px;
   }
   #contact .content {
     flex-direction: column;
@@ -572,9 +631,10 @@ header.sticky ul li a {
   }
   #contact .content .contactInfo > h3 {
     text-align: center;
+    font-size: 17px;
   }
   #contact .content .contactInfo .contactInfoBx h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
   #contact .content .contactInfo .contactInfoBx .box  {
     padding: 10px 0;
@@ -582,10 +642,18 @@ header.sticky ul li a {
   #contact .content .contactInfo .contactInfoBx .box .text {
     font-size: 14px;
   }
-
   #contact .content .formBx {
     min-width: 100%;
     margin-top: 20px;
+  }
+  #contact .content .formBx form input,
+  #contact .content .formBx form textarea {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+  #contact .content .formBx form input::placeholder,
+  #contact .content .formBx form textarea::placeholder {
+    font-weight: normal;
   }
   #contact .content .formBx form input[type="submit"] {
     margin: 0 auto 10px;
