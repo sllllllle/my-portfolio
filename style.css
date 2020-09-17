@@ -172,6 +172,7 @@ header.sticky ul li a {
   height: 400px;
   object-fit: cover;
   border-radius: 50%;
+  -webkit-user-select: none;
 }
 
 #top .btn {
