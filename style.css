@@ -94,12 +94,13 @@ header.sticky ul li a {
 /* ------------------------top------------------------ */
 
 #top {
+  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#top:before {
+/* #top:before {
   content: '';
   display: block;
   position: absolute;
@@ -110,7 +111,7 @@ header.sticky ul li a {
   background: linear-gradient(-35deg, #f2823c 0%, #d65c15 50%, #252627 50%, #252627 100%);
   filter: hue-rotate(120deg);
   animation: animate 10s linear infinite;
-}
+} */
 
 @keyframes animate {
   0% {
@@ -120,12 +121,68 @@ header.sticky ul li a {
     filter: hue-rotate(360deg);
   }
 }
-#top img {
+#top .background-image .html {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 160px;
+  left: 140px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+#top .background-image .css {
+  position: absolute;
+  top: 440px;
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+#top .background-image .aws {
+  position: absolute;
+  top: 160px;
+  left: 700px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+#top .background-image .docker {
+  position: absolute;
+  top: 650px;
+  left: 140px;
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+}
+#top .background-image .rails {
+  position: absolute;
+  top: 650px;
+  left: 340px;
+  width: 250px;
+  height: 90px;
+  object-fit: cover;
+}
+#top .background-image .vue {
+  position: absolute;
+  top: 230px;
+  right: 200px;
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+}
+#top .background-image .javascript {
+  position: absolute;
+  top: 650px;
+  right: 140px;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+#top .background-image .bootstrap {
+  position: absolute;
+  top: 380px;
+  right: 400px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
 }
 #top .textBx {
