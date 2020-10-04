@@ -34,9 +34,10 @@ input[type="button"]::focus {
 
 section {
   padding: 100px;
-  background: #252627;
+  background: url(img/bg3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
-/* ------------------------header------------------------ */
 header {
   position: fixed;
   top: 0;
@@ -71,36 +72,30 @@ header.sticky .logo {
 header ul {
   display: flex;
 }
-
 header ul li {
   list-style: none;
 }
-
 header ul li a {
   text-decoration: none;
   color: #fff;
   margin: 0 15px;
   font-weight: bold;
 }
-
 header.sticky ul li a {
   text-decoration: none;
   color: #000;
   margin: 0 15px;
   font-weight: bold;
-
 }
-/* ------------------------header------------------------ */
-/* ------------------------top------------------------ */
-
 #top {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#top:before {
+/* #top:before {
   content: '';
   display: block;
   position: absolute;
@@ -111,8 +106,7 @@ header.sticky ul li a {
   background: linear-gradient(-35deg, #f2823c 0%, #d65c15 50%, #252627 50%, #252627 100%);
   filter: hue-rotate(120deg);
   animation: animate 10s linear infinite;
-}
-
+} */
 @keyframes animate {
   0% {
     filter: hue-rotate(0deg);
@@ -121,7 +115,7 @@ header.sticky ul li a {
     filter: hue-rotate(360deg);
   }
 }
-#top .background-image .html {
+/* #top .background-image .html {
   position: absolute;
   top: 160px;
   left: 140px;
@@ -185,32 +179,26 @@ header.sticky ul li a {
   width: 80px;
   height: 80px;
   object-fit: cover;
-}
+} */
 #top .textBx {
   z-index: 1;
-  
 }
-
 #top .textBx span {
   display: inline-block;
   color: #fff;
   font-size: 2em;
   font-weight: bold;
 }
-
 #top .textBx span:hover {
   color: #48cfad;
   transition: all 0.5s;
 }
-
 #top .textBx span.name {
   color: #ed5565;
 }
-
 #top .textBx span.m-left {
   margin-left: 10px;
 }
-
 .animated:hover {
   animation-name: rubberBand;
   animation-duration: 0.5s;
@@ -220,7 +208,6 @@ header.sticky ul li a {
   font-size: 1.2em;
   user-select: none;
 } 
-
 #top .imgBx {
   position: relative;
   margin-left: 50px;
@@ -229,9 +216,7 @@ header.sticky ul li a {
   box-shadow:  7px 7px 17px #171819, 
              -7px -7px 17px #333435;
   user-select: none;
-
 }
-
 #top .imgBx img {
   position: relative;
   width: 400px;
@@ -241,7 +226,6 @@ header.sticky ul li a {
   user-select: none;
   -webkit-touch-callout: none;
 }
-
 #top .btn {
   background: #C76423;
   filter: hue-rotate(120deg);
@@ -276,7 +260,6 @@ header.sticky ul li a {
   user-select: none;
   letter-spacing: 2px;
 }
-
 #about .content {
   display: flex;
   justify-content: center;
