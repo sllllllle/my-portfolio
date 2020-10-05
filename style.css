@@ -34,9 +34,9 @@ input[type="button"]::focus {
 
 section {
   padding: 100px;
-  background: url(img/bg3.jpg);
-  background-attachment: fixed;
+  background: url(img/bg6.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 header {
   position: fixed;
@@ -47,11 +47,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
+  background: #ee3b59;
   z-index: 1000;
   transition: 0.5s;
 }
-
 header.sticky {
   background: #fff;
   padding: 20px 100px;
@@ -92,21 +91,10 @@ header.sticky ul li a {
   min-height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  
 }
-/* #top:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(-35deg, #f2823c 0%, #d65c15 50%, #252627 50%, #252627 100%);
-  filter: hue-rotate(120deg);
-  animation: animate 10s linear infinite;
-} */
 @keyframes animate {
   0% {
     filter: hue-rotate(0deg);
@@ -115,78 +103,13 @@ header.sticky ul li a {
     filter: hue-rotate(360deg);
   }
 }
-/* #top .background-image .html {
-  position: absolute;
-  top: 160px;
-  left: 140px;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-#top .background-image .css {
-  position: absolute;
-  top: 270px;
-  right: 200px;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-#top .background-image .aws {
-  position: absolute;
-  top: 200px;
-  left: 550px;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-}
-#top .background-image .docker {
-  position: absolute;
-  top: 650px;
-  left: 140px;
-  width: 200px;
-  height: 140px;
-  object-fit: cover;
-
-}
-#top .background-image .rails {
-  position: absolute;
-  top: 600px;
-  left: 400px;
-  width: 370px;
-  height: 140px;
-  object-fit: cover;
-}
-#top .background-image .vue {
-  position: absolute;
-  top: 230px;
-  right: 400px;
-  width: 240px;
-  height: 200px;
-  object-fit: cover;
-}
-#top .background-image .javascript {
-  position: absolute;
-  top: 650px;
-  right: 140px;
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-}
-#top .background-image .bootstrap {
-  position: absolute;
-  top: 700px;
-  right: 580px;
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-} */
 #top .textBx {
   z-index: 1;
 }
 #top .textBx span {
   display: inline-block;
   color: #fff;
-  font-size: 2em;
+  font-size: 3.4em;
   font-weight: bold;
 }
 #top .textBx span:hover {
@@ -205,17 +128,14 @@ header.sticky ul li a {
 }
 #top .textBx p {
   color: #fff;
-  font-size: 1.2em;
-  user-select: none;
+  font-size: 1.5em;
 } 
 #top .imgBx {
   position: relative;
-  margin-left: 50px;
   border-radius: 50%;
-  background: #252627;
-  box-shadow:  7px 7px 17px #171819, 
-             -7px -7px 17px #333435;
-  user-select: none;
+  /* background: #FEAF70;
+  box-shadow:  20px 20px 60px #d8955f, 
+               -20px -20px 60px #ffc981; */
 }
 #top .imgBx img {
   position: relative;
@@ -246,7 +166,7 @@ header.sticky ul li a {
   min-height: 80vh;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 #about h2 {
@@ -260,7 +180,7 @@ header.sticky ul li a {
   user-select: none;
   letter-spacing: 2px;
 }
-#about .content {
+/* #about .content {
   display: flex;
   justify-content: center;
   border-radius: 50px;
@@ -296,6 +216,39 @@ header.sticky ul li a {
   height: 390px;
   object-fit: cover;
   border-radius: 20px;
+} */
+
+#about .imgBx {
+  position: relative;
+  border-radius: 50%;
+}
+#about .imgBx img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+#about .textBx {
+  width: 500px;
+  background: #FEAF70;
+  box-shadow:  20px 20px 60px #d8955f, 
+               -20px -20px 60px #ffc981;
+  padding: 30px;
+  border-radius: 50px;
+}
+#about .textBx h3 {
+  font-size: 1.4em;
+  color: rgb(0, 0, 0);
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+#about .textBx p {
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 #work {
   min-height: 80vh;
