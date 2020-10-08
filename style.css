@@ -121,97 +121,27 @@ header.sticky ul li a {
     filter: hue-rotate(360deg);
   }
 }
-#top .background-image .html {
-  position: absolute;
-  top: 160px;
-  left: 140px;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-#top .background-image .css {
-  position: absolute;
-  top: 270px;
-  right: 200px;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-#top .background-image .aws {
-  position: absolute;
-  top: 200px;
-  left: 550px;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-}
-#top .background-image .docker {
-  position: absolute;
-  top: 650px;
-  left: 140px;
-  width: 200px;
-  height: 140px;
-  object-fit: cover;
-
-}
-#top .background-image .rails {
-  position: absolute;
-  top: 600px;
-  left: 400px;
-  width: 370px;
-  height: 140px;
-  object-fit: cover;
-}
-#top .background-image .vue {
-  position: absolute;
-  top: 230px;
-  right: 400px;
-  width: 240px;
-  height: 200px;
-  object-fit: cover;
-}
-#top .background-image .javascript {
-  position: absolute;
-  top: 650px;
-  right: 140px;
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-}
-#top .background-image .bootstrap {
-  position: absolute;
-  top: 700px;
-  right: 580px;
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-}
 #top .textBx {
   z-index: 1;
-  
 }
-
 #top .textBx span {
   display: inline-block;
   color: #fff;
   font-size: 2em;
   font-weight: bold;
 }
-
 #top .textBx span:hover {
   color: #48cfad;
   transition: all 0.5s;
 }
-
 #top .textBx span.name {
   color: #ed5565;
 }
-
 #top .textBx span.m-left {
   margin-left: 10px;
 }
-
-.animated:hover {
+#top .textBx .animated:hover,
+#about .textBx .animated:hover {
   animation-name: rubberBand;
   animation-duration: 0.5s;
 }
@@ -220,18 +150,14 @@ header.sticky ul li a {
   font-size: 1.2em;
   user-select: none;
 } 
-
 #top .imgBx {
   position: relative;
   margin-left: 50px;
   border-radius: 50%;
   background: #252627;
-  box-shadow:  7px 7px 17px #171819, 
-             -7px -7px 17px #333435;
+  box-shadow:  7px 7px 17px #171819, -7px -7px 17px #333435;
   user-select: none;
-
 }
-
 #top .imgBx img {
   position: relative;
   width: 400px;
@@ -241,7 +167,6 @@ header.sticky ul li a {
   user-select: none;
   -webkit-touch-callout: none;
 }
-
 #top .btn {
   background: #C76423;
   filter: hue-rotate(120deg);
@@ -338,7 +263,7 @@ header.sticky ul li a {
   user-select: none;
   letter-spacing: 2px;
 }
-#work .content {
+/* #work .content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -372,7 +297,6 @@ header.sticky ul li a {
   opacity: 0;
 }
 #work .content .card:hover .textBx {
-  /* height: calc(100% - 80px); */
   height: 100%;
   opacity: 1;
 }
@@ -383,6 +307,68 @@ header.sticky ul li a {
 }
 #work .content .card .textBx p:nth-child(odd) {
   margin-bottom: 10px;
+} */
+#work .card {
+  position: relative;
+  border-radius: 50px;
+  background: #252627;
+  box-shadow: 9px 9px 23px #131314, -9px -9px 23px #38393b;
+  width: 600px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card img {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  height: 300px;
+  transition: 0.5s;
+}
+.card:hover img {
+  right: 0;
+  height: 200px;
+  transform: none;
+}
+.card:hover .animated {
+  animation-name: pulse;
+  animation-duration: 0.9s;
+}
+.card .card-content {
+  position: relative;
+  width: 40%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.card:hover .card-content
+{
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.card .card-content h3 {
+  color: #fff;
+  font-weight: bold;
+}
+.card .card-content p {
+  color: #fff;
+}
+.card .card-content a {
+  background: #C76423;
+  display: inline-block;
+  color: #fff;
+  margin-top: 20px;
+  padding: 8px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  user-select: none;
+  cursor: pointer;
 }
 #feedback {
   min-height: 60vh;
@@ -503,8 +489,9 @@ header.sticky ul li a {
   text-transform: uppercase;
   letter-spacing: 2px;
   background: #C76423;
-  filter: hue-rotate(120deg);
-  animation: animate 10s linear infinite;
+  display: inline-block;
+  color: #fff;
+  padding: 8px 30px;  
 }
 #contact .contactInfo {
   min-width: 40%;
