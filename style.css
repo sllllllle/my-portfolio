@@ -697,6 +697,12 @@ header.sticky ul li a {
   #about .textBx p {
     font-size: 12px;
   }
+  #work .card {
+    height: 200px;
+  }
+  #work .card.hover {
+    height: 400px;
+  }
   #work .card:nth-child(2) {
     margin-top: 50px;
   }
