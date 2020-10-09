@@ -14,12 +14,12 @@
 <body>
   <header>
     <a href="#top" class="logo">My Portfolio</a>
-    <div class="toggle" onClick="toggleMenu()"></div>
+    <div class="toggle" onClick="menuToggle()"></div>
     <ul class="menu">
-      <li><a href="#top" onClick="toggleMenu()">Home</a></li>
-      <li><a href="#about" onClick="toggleMenu()">About Me</a></li>
-      <li><a href="#work" onClick="toggleMenu()">Work</a></li>
-      <li><a href="#contact" onClick="toggleMenu()">Contact</a></li>
+      <li><a href="#top" onClick="menuToggle()">Home</a></li>
+      <li><a href="#about" onClick="menuToggle()">About Me</a></li>
+      <li><a href="#work" onClick="menuToggle()">Work</a></li>
+      <li><a href="#contact" onClick="menuToggle()">Contact</a></li>
     </ul>
   </header>
   <main>
@@ -64,39 +64,11 @@
     </section>
     <section id="work">
       <h2>Work</h2>
-      <!-- <div class="content">
-        <div class="card"><a href="https://www.home-study.gq/">
-          <div class="imgBx">
-            <img src="img/homsta.png">
-          </div>
-          <div class="textBx">
-            <p class="name">Home Study (2020.8)</p>
-            <p>■FrontEnd</p>
-            <p>HTML CSS Javascript Bootstrap</p>
-            <p>■BackEnd</p>
-            <p>Ruby Rails</p>
-            <p>■Other</p>
-            <p>MySQL Nginx Puma VPC RDS EC2 ALB ACM Route53 Docker RSpec</p>
-          </div>
-        </div></a>
-        <div class="card">
-          <div class="imgBx">
-            <img src="img/portfolio.png">
-          </div>
-          <div class="textBx">
-            <div>
-              <p class="name">My Portfolio Website (2020.9)</p>
-              <p>■FrontEnd</p>
-              <p>HTML CSS Javascript Vue.js</p>
-            </div>
-          </div>
-        </div>
-      </div> -->
       <div class="card">
         <div class="card-content animated">
           <h3>ホムスタ</h3>
           <p>家で勉強する人たちのためのコミュニティサイト</p>
-          <button onClick="popupToggle1()">詳細</button>
+          <a onClick="popupToggle1()">詳細</a>
         </div>
         <img src="img/homsta.png">
       </div>
@@ -104,7 +76,7 @@
         <div class="card-content animated">
           <h3>このサイト</h3>
           <p>製作途中</p>
-          <button onClick="popupToggle2()">詳細</button>
+          <a onClick="popupToggle2()">詳細</a>
         </div>
         <img src="img/portfolio.png">
       </div>
@@ -118,6 +90,8 @@
       <p>Ruby Rails</p>
       <p>■Other</p>
       <p>MySQL Nginx Puma VPC RDS EC2 ALB ACM Route53 Docker RSpec</p>
+      <p>t2.microの容量の問題で、サーバー立ち上げ後一定時間たつと落ちてしまう現象が...</p>
+      <p>問題解決まで、しばらくお待ちください。</p>
       <button onClick="popupToggle1()">閉じる</button>
     </div>
     <div id="popup2">
@@ -126,71 +100,45 @@
       <p>HTML CSS Javascript Vue.js</p>
       <button onClick="popupToggle2()">閉じる</button>
     </div>
-    <section id="feedback">
-      <div class="content">
-        <form action="https://api.staticforms.xyz/submit" method="post">
-          <h2>よろしければ、このWebサイトのご感想をお聞かせください。</h2>
-          <textarea v-model="feedback" maxlength="140" placeholder="ご感想" name="message"></textarea>
-          <p v-bind:style="{color: computedColor}">残り {{ remaining }}文字</p>
-          <input type="hidden" name="accessKey" value="e6ffcc59-cdc9-4178-9b37-8a50382237c2">
-          <input type="hidden" name="subject" value="Feedback from My Portfolio">
-          <input type="submit" value="送信">
-        </form>
-      </div>
-    </section>
     <section id="contact">
-      <div class="heading">
-        <h2>Contact</h2>
-        <p>24時間以内にご返信いたします。</p>
-      </div>
-      <div class="content">
-        <div class="contactInfo">
-          <h3>連絡情報</h3>
-          <div class="contactInfoBx">
-            <div class="box">
-              <div class="icon">
-                <i class="fa fa-map-marker"></i>
-              </div>
-              <div class="text">
-                <h3>住所</h3>
-                <p>三重県四日市市富田浜町28-17</p>
-              </div>
-            </div>
-            <div class="box">
-              <div class="icon">
-                <i class="fa fa-phone"></i>
-              </div>
-              <div class="text">
-                <h3>携帯電話</h3>
-                <p>070-4457-0874</p>
-              </div>
-            </div>
-            <div class="box">
-              <div class="icon">
-                <i class="fa fa-envelope"></i>
-              </div>
-              <div class="text">
-                <h3>メールアドレス</h3>
-                <p>lac85md@icloud.com</p>
-              </div>
-            </div>
+      <div class="container">
+        <div class="reception messageBx">
+          <div class="photoBx">
+            <img src="img/keyboard1.jpg">
+          </div>
+          <div class="formBx">
+            <form action="https://api.staticforms.xyz/submit" method="post">
+              <h2>お問い合わせ</h2>
+              <input type="text" name="name" placeholder="氏名">
+              <input type="email" name="email" placeholder="メールアドレス">
+              <textarea placeholder="ご用件" name="message"></textarea>
+              <input type="hidden" name="accessKey" value="e6ffcc59-cdc9-4178-9b37-8a50382237c2">
+              <input type="hidden" name="subject" value="Contact from My Portfolio">
+              <input type="submit" value="送信">
+              <p class="ask-feedback">このウェブサイトの感想を頂けませんか？ <a onClick="formToggle()">はい</a></p>
+            </form>
           </div>
         </div>
-        <div class="formBx">
-          <h3>メッセージ</h3>
-          <form action="https://api.staticforms.xyz/submit" method="post">
-            <input type="text" name="name" placeholder="氏名">
-            <input type="email" name="email" placeholder="メールアドレス">
-            <textarea placeholder="ご用件" name="message"></textarea>
-            <input type="hidden" name="accessKey" value="e6ffcc59-cdc9-4178-9b37-8a50382237c2">
-            <input type="hidden" name="subject" value="Contact from My Portfolio">
-            <input type="submit" value="送信">
-          </form>
+        <div class="reception feedbackBx">
+          <div class="formBx">
+            <form action="https://api.staticforms.xyz/submit" method="post">
+              <h2>ご感想</h2>
+              <textarea v-model="feedback" maxlength="140" placeholder="ご意見、ご感想" name="message"></textarea>
+              <p class="remaining" v-bind:style="{color: computedColor}">残り {{ remaining }}文字</p>
+              <input type="hidden" name="accessKey" value="e6ffcc59-cdc9-4178-9b37-8a50382237c2">
+              <input type="hidden" name="subject" value="Feedback from My Portfolio">
+              <input type="submit" value="送信">
+              <p class="ask-contact">私へのご連絡は<a onClick="formToggle()">こちら</a></p>
+            </form>
+          </div>
+          <div class="photoBx">
+            <img src="img/keyboard2.jpg" alt="">
+          </div>
         </div>
       </div>
     </section>
     <div class="copyright">
-      <p>Copyright 🄫 2020 Katsuyuki Suenaga. ALL Right Reserved.</p>
+      <p>Copyright 🄫 2020 Katsuyuki Suenaga.</p>
     </div>
   </main>
   <script type="text/javascript">
@@ -198,26 +146,21 @@
       var header = document.querySelector('header');
       header.classList.toggle('sticky', window.scrollY > 0);
     });
-
-    function toggleMenu() {
+    function menuToggle() {
       var menuToggle = document.querySelector('.toggle');
       var menu = document.querySelector('.menu');
       menuToggle.classList.toggle('active');
       menu.classList.toggle('active');
     }
-
     document.addEventListener("mousemove" , parallax);
     function parallax(e) {
       this.querySelectorAll('.layer').forEach(layer => {
         const speed = layer.getAttribute('data-speed')
-
         const x = (window.innerWidth - e.pageX*speed)/100
         const y = (window.innerHeight - e.pageY*speed)/100
-
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
       })
     }
-
     function popupToggle1() {
       var popup1 = document.getElementById('popup1');
       popup1.classList.toggle('active');
@@ -230,10 +173,18 @@
       var work = document.getElementById('work');
       work.classList.toggle('active');
     }
+    function formToggle() {
+      var container = document.querySelector('.container');
+      var contact = document.getElementById('contact');
+      var copyright = document.querySelector('.copyright');
+      container.classList.toggle('active'); 
+      contact.classList.toggle('active');
+      copyright.classList.toggle('active');
+    }
   </script>
   <script>
     new Vue({
-      el: '#feedback',
+      el: '#contact',
       data: {
         feedback: ''
       },

@@ -90,9 +90,6 @@ header.sticky ul li a {
   font-weight: bold;
 
 }
-/* ------------------------header------------------------ */
-/* ------------------------top------------------------ */
-
 #top {
   position: relative;
   min-height: 100vh;
@@ -184,7 +181,7 @@ header.sticky ul li a {
   cursor: pointer;
 }
 #about {
-  min-height: 80vh;
+  min-height: 90vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -224,9 +221,9 @@ header.sticky ul li a {
   margin-bottom: 10px;
 }
 #about .textBx p {
-  color: rgb(223, 223, 223);
+  color: #fff;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-size: 15px;
 }
 #about .textBx img {
   filter: invert(1);
@@ -246,11 +243,12 @@ header.sticky ul li a {
   border-radius: 20px;
 }
 #work {
-  min-height: 80vh;
+  min-height: 90vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 #work h2 {
   opacity: .1;
@@ -279,12 +277,12 @@ header.sticky ul li a {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  height: 300px;
+  width: 90%;
   transition: 0.5s;
 }
 .card:hover img {
   right: 0;
-  height: 200px;
+  width: 60%;
   transform: none;
 }
 .card:hover .animated {
@@ -312,16 +310,16 @@ header.sticky ul li a {
 }
 .card .card-content p {
   color: #fff;
+  font-size: 15px;
 }
-.card .card-content button {
+.card .card-content a {
   background: #C76423;
   display: inline-block;
   color: #fff;
   margin-top: 20px;
   padding: 8px 30px;
-  font-size: 18px;
   text-decoration: none;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   user-select: none;
   cursor: pointer;
   outline: none;
@@ -360,7 +358,7 @@ header.sticky ul li a {
   font-size: 1.3rem;
 }
 #popup1 p:nth-child(odd),
-#popup2 p:nth-child(even) {
+#popup2 p:nth-child(2) {
   margin-top: 10px;
 }
 #popup1 button,
@@ -370,175 +368,205 @@ header.sticky ul li a {
   color: #fff;
   margin-top: 20px;
   padding: 8px 30px;
-  font-size: 18px;
   text-decoration: none;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   user-select: none;
   cursor: pointer;
-  font-size: 1em;
   outline: none;
   border: none;
-}
-#feedback {
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#feedback .content {
-  border-radius: 50px 50px 0 0;
-  background: #252627;
-  box-shadow:  9px 9px 23px #131314, -9px -9px 23px #38393b;
-  min-width: 1000px;
-}
-#feedback .content form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#feedback .content h2 {
-  margin: 20px;
-  margin-bottom: 0;
-  color: #fff;
-  font-size: 1.2em;
-  letter-spacing: 2px;
-  text-align: center;
-}
-#feedback .content textarea {
-  position: relative;
-  margin: 0 auto;
-  padding: 10px 15px;
   font-size: 16px;
-  border: none;
-  border-bottom: 2px solid #fff;
-  outline: none;
-  color: #fff;
-  resize: none;
-  background: transparent;
-  width: 70%;
-  height: 120px;
-}
-#feedback .content textarea::placeholder {
-  font-weight: bold;
-}
-#feedback .content p {
-  text-align: right;
-  font-weight: bold;
-  font-size: 13px;
-  margin: 10px 0 20px;
-}
-#feedback .content input[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  height: 40px;
-  font-weight: bold;
-  background: #fff;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 20px 20px 0 0;
-  font-size: 20px;
-  letter-spacing: 2px;
 }
 #contact {
+  position: relative;
+  min-height: 80vh;
   background: #fff;
-}
-#contact .heading {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #111;
-}
-#contact .heading h2 {
-  font-weight: 600;
-  font-size: 30px;
-}
-#contact .heading p {
-  font-weight: bold;
-}
-#contact .content {
   display: flex;
-  justify-content: space-between;
-}
-#contact .formBx {
-  min-width: 60%;
-}
-#contact .formBx form {
-  display: flex;
-  flex-direction: column;
-}
-#contact .contactInfo h3,
-#contact .formBx h3 {
-  color: #111;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-#contact .formBx form input,
-#contact .formBx form textarea {
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background: #252627;
-  color: #fff;
-  resize: none;
-}
-#contact .formBx form textarea {
-  min-height: 200px;
-}
-#contact .formBx form input::placeholder,
-#contact .formBx form textarea::placeholder {
-  color: #999;
-  font-weight: bold;
-}
-#contact .formBx form input[type="submit"] {
-  max-width: 100px;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: #C76423;
-  display: inline-block;
-  color: #fff;
-  padding: 8px 30px;  
-}
-#contact .contactInfo {
-  min-width: 40%;
-}
-#contact .contactInfo p {
-  font-weight: 600;
-}
-#contact .contactInfoBx {
-  position: relative;
-}
-#contact .contactInfoBx .box {
-  position: relative;
-  padding: 20px 0;
-  display: flex;
-}
-#contact .contactInfoBx .box .icon {
-  min-width: 40px;
-  padding-top: 4px;
-  color: #252627;
-  display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  font-size: 24px;
+  padding: 20px;
+  transition: 0.5s;
 }
-#contact .contactInfoBx .box .text {
+#contact.active {
+  background: #252627;
+}
+#contact .container {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow:  9px 9px 23px #d9d9d9, -9px -9px 23px #ffffff;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#contact .container.active {
+  border-radius: 50px;
+  background: #252627;
+  box-shadow:  9px 9px 23px #131314, -9px -9px 23px #38393b;
+}
+#contact .container .reception {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  margin-left: 20px;
-  font-size: 16px;
-  color: #111;
-  flex-direction: column;
-  font-weight: 300;
+}
+#contact .container .reception .photoBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  transition: 0.5s;
+}
+#contact .container.active .reception .photoBx {
+  background-color: #252627
 }
 
+#contact .container .reception .photoBx .info {
+  z-index: 100000;
+}
+#contact .container .reception .photoBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#contact .container.active .reception .photoBx img{
+  mix-blend-mode: multiply;
+}
+#contact .container .reception .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+#contact .container .reception form {
+  width: 100%;
+}
+#contact .container.active .reception form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#contact .container .reception .formBx form h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+#contact .container .reception .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+#contact .container .reception .formBx form textarea {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  height: 200px;
+  resize: none;
+}
+#contact .container .reception .formBx form input[type="submit"] {
+  max-width: 100px;
+  background: #677eff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+#contact .container .reception .formBx form .ask-contact,
+#contact .container .reception .formBx form .ask-feedback {
+  position: relative;
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #555;
+}
+#contact .container .reception .formBx form .ask-contact a,
+#contact .container .reception .formBx form .ask-feedback a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+  cursor: pointer;
+}
+#contact .container .reception .formBx form .remaining {
+  font-size: 13px;
+  text-align: end;
+}
+#contact .container .feedbackBx {
+  pointer-events: none;
+}
+#contact .container.active .feedbackBx {
+  pointer-events: initial;
+}
+#contact .container .feedbackBx .formBx {
+  left: 100%;
+}
+#contact .container.active .feedbackBx .formBx {
+  left: 0;
+}
+#contact .container .feedbackBx .photoBx {
+  left: -100%;
+}
+#contact .container.active .feedbackBx .photoBx {
+  left: 0;
+}
+#contact .container .messageBx .formBx {
+  left: 0;
+}
+#contact .container.active .messageBx .formBx {
+  left: 100%;
+}
+#contact .container .messageBx .photoBx {
+  left: 0%;
+}
+#contact .container.active .messageBx .photoBx {
+  left: -100%;
+}
 .copyright {
   background: #252627;
+  padding: 10px;
+  transition: 0.5s;
+}
+.copyright.active {
+  background: #fff;
+}
+.copyright p {
   color: #fff;
   text-align: center;
-  padding: 10px;
+}
+.copyright.active p {
+  color: #000;
 }
 
 @media (max-width: 991px) {
@@ -654,7 +682,6 @@ header.sticky ul li a {
     flex-direction: column;
     margin-top: 50px;
     min-width: 100%;
-    
   }
   #about .imgBx img {
     height: 240px;
@@ -670,70 +697,19 @@ header.sticky ul li a {
   #about .textBx p {
     font-size: 12px;
   }
-  #work {
-    min-height: 70vh;
-    align-items: flex-start;
-  }
-  #work .content {
+  #work .card:nth-child(2) {
     margin-top: 50px;
   }
-  #feedback .content {
-    min-width: 100%;
+  #contact .container {
+    max-width: 400px;
   }
-  #feedback .content h2 {
-    font-size: 14px;
+  #contact .container .photoBx {
+    display: none;
   }
-  #feedback .content textarea {
-    width: 80%;
-    font-size: 14px ;
+  #contact .container .reception .formBx {
+    width: 100%;
   }
-  #feedback .content button {
-    font-size: 15px;
-  }
-  #contact .heading h2 {
-    font-size: 20px;
-  }
-  #contact .heading p {
-    font-size: 14px;
-  }
-  #contact .content {
-    flex-direction: column;
-    align-items: center;
-  }
-  #contact .content .contactInfo {
-    min-width: 100%;
-  }
-  #contact .content .contactInfo > h3,
-  #contact .content .formBx > h3 {
-    text-align: center;
-    font-size: 17px;
-  }
-  #contact .content .contactInfo .contactInfoBx h3 {
-    font-size: 16px;
-  }
-  #contact .content .contactInfo .contactInfoBx .box  {
-    padding: 10px 0;
-  }
-  #contact .content .contactInfo .contactInfoBx .box .text {
-    font-size: 14px;
-  }
-  #contact .content .formBx {
-    min-width: 100%;
-    margin-top: 20px;
-  }
-  #contact .content .formBx form input,
-  #contact .content .formBx form textarea {
-    padding: 5px 10px;
-    margin-bottom: 10px;
-  }
-  #contact .content .formBx form input::placeholder,
-  #contact .content .formBx form textarea::placeholder {
-    font-weight: normal;
-  }
-  #contact .content .formBx form input[type="submit"] {
-    margin: 0 auto 10px;
-  }
-  .copyright {
+  .copyright p {
     font-size: 10px;
   }
 }
