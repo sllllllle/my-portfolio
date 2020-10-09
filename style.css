@@ -279,6 +279,7 @@ header.sticky ul li a {
   transform: translateX(50%);
   width: 90%;
   transition: 0.5s;
+  backface-visibility: hidden;
 }
 .card:hover img {
   right: 0;
