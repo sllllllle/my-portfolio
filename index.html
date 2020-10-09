@@ -94,22 +94,38 @@
       </div> -->
       <div class="card">
         <div class="card-content animated">
-          <h3>ホームスタディ</h3>
+          <h3>ホムスタ</h3>
           <p>家で勉強する人たちのためのコミュニティサイト</p>
-          <a href="#">詳細</a>
+          <button onClick="popupToggle1()">詳細</button>
         </div>
         <img src="img/homsta.png">
       </div>
       <div class="card">
         <div class="card-content animated">
           <h3>このサイト</h3>
-          <p>完成はまだ遠い…</p>
-          <a href="#">詳細</a>
+          <p>製作途中</p>
+          <button onClick="popupToggle2()">詳細</button>
         </div>
         <img src="img/portfolio.png">
       </div>
     </section>
-
+    <div id="popup1">
+      <h3>ホムスタ(2020.8)</h3>
+      <a href="https://www.home-study.gq/">https://www.home-study.gq/</a>
+      <p>■FrontEnd</p>
+      <p>HTML CSS Javascript Bootstrap</p>
+      <p>■BackEnd</p>
+      <p>Ruby Rails</p>
+      <p>■Other</p>
+      <p>MySQL Nginx Puma VPC RDS EC2 ALB ACM Route53 Docker RSpec</p>
+      <button onClick="popupToggle1()">閉じる</button>
+    </div>
+    <div id="popup2">
+      <h3>このサイト</h3>
+      <p>■FrontEnd</p>
+      <p>HTML CSS Javascript Vue.js</p>
+      <button onClick="popupToggle2()">閉じる</button>
+    </div>
     <section id="feedback">
       <div class="content">
         <form action="https://api.staticforms.xyz/submit" method="post">
@@ -200,6 +216,19 @@
 
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
       })
+    }
+
+    function popupToggle1() {
+      var popup1 = document.getElementById('popup1');
+      popup1.classList.toggle('active');
+      var work = document.getElementById('work');
+      work.classList.toggle('active');
+    }
+    function popupToggle2() {
+      var popup2 = document.getElementById('popup2');
+      popup2.classList.toggle('active');
+      var work = document.getElementById('work');
+      work.classList.toggle('active');
     }
   </script>
   <script>
