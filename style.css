@@ -731,6 +731,11 @@ header.sticky ul li a {
     left: auto;
     text-align: center;
   }
+  #popup1,
+  #popup2 {
+    width: 90%;
+    text-align: center;
+  }
   #contact {
     padding-top: 50px;
   }
