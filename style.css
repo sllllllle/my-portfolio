@@ -631,11 +631,10 @@ header.sticky ul li a {
   #work h2 {
     font-size: 8em;
   }
-  #feedback .content {
-    min-width: 100%;
-  }
-  #feedback .content h2 {
-    font-size: 1em;
+  #popup1,
+  #popup2 {
+    width: 70%;
+    text-align: center;
   }
 }
 @media (max-width: 480px) {
@@ -734,7 +733,6 @@ header.sticky ul li a {
   #popup1,
   #popup2 {
     width: 90%;
-    text-align: center;
   }
   #contact {
     padding-top: 50px;
