@@ -281,7 +281,6 @@ header.sticky ul li a {
   transform: translateX(50%);
   width: 90%;
   transition: 0.5s;
-  backface-visibility: hidden;
 }
 .card:hover img {
   right: 0;
@@ -695,20 +694,43 @@ header.sticky ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
   #about .textBx h3 {
     font-size: 17px;
     text-align: center;
   }
+  #work {
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
   #work .card {
-    height: 200px;
+    width: 100%;
+    height: 250px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
-  #work .card.hover {
-    height: 400px;
+  #work .card:hover {
+    height: 360px;
   }
-  #work .card:nth-child(2) {
-    margin-top: 50px;
+  #work .card img {
+    top: 30px;
+  }
+  #work .card:hover img {
+    right: 50%;
+    top: 30px;
+    width: 90%;
+    transform: translateX(50%);
+  }
+  #work .card .card-content {
+    width: auto;
+    left: auto;
+    
+    text-align: center;
   }
   #contact .container {
     max-width: 400px;
