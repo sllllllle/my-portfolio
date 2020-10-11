@@ -729,8 +729,10 @@ header.sticky ul li a {
   #work .card .card-content {
     width: auto;
     left: auto;
-    
     text-align: center;
+  }
+  #contact {
+    padding-top: 50px;
   }
   #contact .container {
     max-width: 400px;
