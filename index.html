@@ -145,24 +145,28 @@
     </main>
   </div>
   <script type="text/javascript">
-    window.addEventListener('scroll', function() {
+    if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+      window.addEventListener('scroll', function() {
       var header = document.querySelector('header');
       header.classList.toggle('sticky', window.scrollY > 0);
     });
+    }
     function menuToggle() {
       var menuToggle = document.querySelector('.toggle');
       var menu = document.querySelector('.menu');
       menuToggle.classList.toggle('active');
       menu.classList.toggle('active');
     }
-    document.addEventListener("mousemove" , parallax);
-    function parallax(e) {
-      this.querySelectorAll('.layer').forEach(layer => {
-        const speed = layer.getAttribute('data-speed')
-        const x = (window.innerWidth - e.pageX*speed)/100
-        const y = (window.innerHeight - e.pageY*speed)/100
-        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-      })
+    if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+      document.addEventListener("mousemove" , parallax);
+      function parallax(e) {
+        this.querySelectorAll('.layer').forEach(layer => {
+          const speed = layer.getAttribute('data-speed')
+          const x = (window.innerWidth - e.pageX*speed)/100
+          const y = (window.innerHeight - e.pageY*speed)/100
+          layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+        })
+      }
     }
     function popupToggle1() {
       var popup1 = document.getElementById('popup1');
