@@ -668,7 +668,8 @@ header.sticky ul li a {
     height: 200px;
   }
   #top .textBx span {
-    font-size: 1.6em;
+    font-size: 1.8em;
+    letter-spacing: -3px;
   }
   #top .btn {
     display: none;
