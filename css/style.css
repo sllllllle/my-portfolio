@@ -632,11 +632,11 @@ header.sticky ul li a {
   }
 }
 @media (max-width: 480px) {
-  /* .wrapper {
+  .wrapper {
     height: 100vh;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
-  } */
+  }
   header,
   header.sticky {
     padding: 20px 30px;
