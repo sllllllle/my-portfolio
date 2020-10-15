@@ -31,12 +31,10 @@ input[type="button"]::focus {
   outline-offset: -2px;
 }
 /* 「iOSでのsubmit, buttonのデザインをリセットするCSS」- https://qiita.com/mi_upto/items/b35f405a87a2dc56fd48 */
-
 section {
   padding: 100px;
   background: #252627;
 }
-/* ------------------------header------------------------ */
 header {
   position: fixed;
   top: 0;
@@ -50,7 +48,6 @@ header {
   z-index: 1000;
   transition: 0.5s;
 }
-
 header.sticky {
   background: #fff;
   padding: 20px 100px;
@@ -64,31 +61,26 @@ header .logo {
   letter-spacing: 2px;
   color: #fff;
 }
-
 header.sticky .logo {
   color: #111;
 }
 header ul {
   display: flex;
 }
-
 header ul li {
   list-style: none;
 }
-
 header ul li a {
   text-decoration: none;
   color: #fff;
   margin: 0 15px;
   font-weight: bold;
 }
-
 header.sticky ul li a {
   text-decoration: none;
   color: #000;
   margin: 0 15px;
   font-weight: bold;
-
 }
 #top {
   position: relative;
@@ -109,7 +101,6 @@ header.sticky ul li a {
   filter: hue-rotate(120deg);
   animation: animate 10s linear infinite;
 }
-
 @keyframes animate {
   0% {
     filter: hue-rotate(0deg);
@@ -164,6 +155,10 @@ header.sticky ul li a {
   user-select: none;
   -webkit-touch-callout: none;
 }
+.mask {
+  -webkit-clip-path: url(#svgPath);
+  clip-path: url(#svgPath);
+}
 #top .btn {
   background: #C76423;
   filter: hue-rotate(120deg);
@@ -198,7 +193,6 @@ header.sticky ul li a {
   user-select: none;
   letter-spacing: 2px;
 }
-
 #about .content {
   display: flex;
   justify-content: center;
@@ -603,14 +597,14 @@ header.sticky ul li a {
   .toggle {
     width: 40px;
     height: 40px;
-    background: url(img/menu.png);
+    background: url(../img/menu.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px;
     cursor: pointer;
   }
   .toggle.active {
-    background: url(img/close.png);
+    background: url(../img/close.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px;
@@ -638,6 +632,11 @@ header.sticky ul li a {
   }
 }
 @media (max-width: 480px) {
+  .wrapper {
+    height: 100vh;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
   header,
   header.sticky {
     padding: 20px 30px;
