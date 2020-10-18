@@ -653,7 +653,7 @@ header.sticky ul li a {
     flex-direction: column;
   }
   #top::before {
-    display: none;
+    /* display: none; */
   }
   #top .textBx {
     text-align: center;
